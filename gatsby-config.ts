@@ -2,12 +2,13 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "Physipro Physiotherapy",
+    title: "PhysiPro Physiotherapy",
     description:
       "Evidence-based physiotherapy in Perth, WA — assessment, treatment, and rehabilitation.",
     siteUrl: "https://www.physipro.com.au",
-    author: "Physipro",
+    author: "PhysiPro",
     locale: "en-AU",
+    image: "/og-image.jpg",
   },
   graphqlTypegen: true,
   plugins: [
