@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: "PhysiPro Physiotherapy",
     description:
       "Master-qualified physiotherapy in Perth, WA with Vienn Chan — assessment, hands-on treatment, rehabilitation, home visits and telehealth.",
-    siteUrl: "https://physipro-physio-therapy.netlify.app",
+    siteUrl: "https://physiprophysiotherapy.com",
     author: "PhysiPro",
     locale: "en-AU",
     image: "/og-image.jpg",

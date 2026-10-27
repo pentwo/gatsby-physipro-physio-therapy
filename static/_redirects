@@ -1,0 +1,2 @@
+# Send the Netlify subdomain to the primary domain (deploy previews use other hostnames)
+https://physipro-physio-therapy.netlify.app/*  https://physiprophysiotherapy.com/:splat  301!

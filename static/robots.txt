@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://physipro-physio-therapy.netlify.app/sitemap-index.xml
+Sitemap: https://physiprophysiotherapy.com/sitemap-index.xml

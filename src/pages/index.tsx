@@ -353,6 +353,7 @@ export default IndexPage;
 
 export const Head: HeadFC = ({ location }) => (
   <Seo
+    title="Vienn Chan – Physiotherapist in Perth"
     description="Master-qualified physiotherapy in Perth with Vienn Chan — musculoskeletal pain, sports injury, NKT, acupuncture and home visits from Duncraig."
     pathname={location.pathname}
   />

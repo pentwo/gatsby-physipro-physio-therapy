@@ -41,47 +41,98 @@ export const Seo: React.FC<SeoProps> = ({
     image: `${siteMetadata.siteUrl}${image || siteMetadata.image}`,
   };
 
+  const businessId = `${siteMetadata.siteUrl}/#business`;
+  const personId = `${siteMetadata.siteUrl}/#vienn-chan`;
+  const sameAs = [
+    "https://www.facebook.com/vienn.physipro.physiotherapy.perth",
+    "https://www.instagram.com/vienn_perth_physio/",
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Physiotherapy",
-    "@id": `${siteMetadata.siteUrl}/#business`,
-    name: siteMetadata.title,
-    description: siteMetadata.description,
-    url: siteMetadata.siteUrl,
-    image: `${siteMetadata.siteUrl}${siteMetadata.image}`,
-    logo: `${siteMetadata.siteUrl}/favicon.svg`,
-    telephone: "+61414783263",
-    email: "physiprophysiotherapy@gmail.com",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Duncraig",
-      addressRegion: "WA",
-      postalCode: "6023",
-      addressCountry: "AU",
-    },
-    areaServed: "Perth, WA",
-    openingHoursSpecification: [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Tuesday", "Thursday"],
-        opens: "09:00",
-        closes: "17:00",
+        "@type": "Physiotherapy",
+        "@id": businessId,
+        name: siteMetadata.title,
+        description: siteMetadata.description,
+        url: siteMetadata.siteUrl,
+        image: `${siteMetadata.siteUrl}${siteMetadata.image}`,
+        logo: `${siteMetadata.siteUrl}/favicon.svg`,
+        telephone: "+61414783263",
+        email: "physiprophysiotherapy@gmail.com",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Duncraig",
+          addressRegion: "WA",
+          postalCode: "6023",
+          addressCountry: "AU",
+        },
+        areaServed: "Perth, WA",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Tuesday", "Thursday"],
+            opens: "09:00",
+            closes: "17:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Saturday",
+            opens: "09:00",
+            closes: "13:00",
+          },
+        ],
+        founder: { "@id": personId },
+        employee: { "@id": personId },
+        sameAs,
       },
       {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "09:00",
-        closes: "13:00",
+        "@type": "Person",
+        "@id": personId,
+        name: "Vienn Chan",
+        alternateName: ["Vienn Chan Ka Yan", "陳嘉欣"],
+        jobTitle: "Master Physiotherapist",
+        url: `${siteMetadata.siteUrl}/about/`,
+        worksFor: { "@id": businessId },
+        knowsLanguage: ["English", "Cantonese", "Mandarin"],
+        knowsAbout: [
+          "Physiotherapy",
+          "Musculoskeletal physiotherapy",
+          "Neurokinetic Therapy",
+          "Vestibular rehabilitation",
+          "Pelvic health",
+          "Clinical Pilates",
+          "Acupuncture",
+        ],
+        alumniOf: [
+          { "@type": "CollegeOrUniversity", name: "Curtin University" },
+          { "@type": "CollegeOrUniversity", name: "The Hong Kong Polytechnic University" },
+        ],
+        hasCredential: [
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "degree",
+            name: "Master of Clinical Physiotherapy (Musculoskeletal)",
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "degree",
+            name: "Bachelor of Physiotherapy",
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "certificate",
+            name: "Diploma in Clinical Acupuncture",
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            credentialCategory: "certificate",
+            name: "Neurokinetic Therapy Level 3 (Master)",
+          },
+        ],
+        sameAs,
       },
-    ],
-    founder: {
-      "@type": "Person",
-      name: "Vienn Chan",
-      jobTitle: "Master Physiotherapist",
-    },
-    sameAs: [
-      "https://www.facebook.com/vienn.physipro.physiotherapy.perth",
-      "https://www.instagram.com/vienn_perth_physio/",
     ],
   };
 
