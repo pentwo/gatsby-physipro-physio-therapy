@@ -208,4 +208,10 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, reversed, bookTe
 
 export default ServicesPage;
 
-export const Head: HeadFC = () => <Seo title="Services" />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    title="Services"
+    description="Physiotherapy services in Perth: musculoskeletal pain, sports injury, post-operative rehab, prenatal and postnatal care, vestibular rehabilitation and women's and men's health."
+    pathname={location.pathname}
+  />
+);

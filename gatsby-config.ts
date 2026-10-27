@@ -4,8 +4,8 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: "PhysiPro Physiotherapy",
     description:
-      "Evidence-based physiotherapy in Perth, WA — assessment, treatment, and rehabilitation.",
-    siteUrl: "https://www.physipro.com.au",
+      "Master-qualified physiotherapy in Perth, WA with Vienn Chan — assessment, hands-on treatment, rehabilitation, home visits and telehealth.",
+    siteUrl: "https://physipro-physio-therapy.netlify.app",
     author: "PhysiPro",
     locale: "en-AU",
     image: "/og-image.jpg",
@@ -26,7 +26,10 @@ const config: GatsbyConfig = {
         background_color: "#F8F6F0",
         theme_color: "#5B4BE0",
         display: "standalone",
-        icon: "src/images/icon.png", // 512x512 png — add this before first build
+        icon: "src/images/icon.png",
+        // Favicons and apple-touch-icon are served from /static and linked in Seo.tsx
+        include_favicon: false,
+        legacy: false,
       },
     },
     {

@@ -189,4 +189,10 @@ const AboutPage: React.FC<PageProps> = () => {
 
 export default AboutPage;
 
-export const Head: HeadFC = () => <Seo title="About" />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    title="About Vienn Chan"
+    description="Vienn Chan is a Master-qualified physiotherapist with ten years of experience in Hong Kong and Perth, combining clinical Pilates, acupuncture and Neurokinetic Therapy."
+    pathname={location.pathname}
+  />
+);

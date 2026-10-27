@@ -200,4 +200,10 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => <Seo title="Contact" />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    title="Contact"
+    description="Book physiotherapy with Vienn Chan in Duncraig, Perth. Call or SMS 0414 783 263, or request a home visit or telehealth consultation."
+    pathname={location.pathname}
+  />
+);

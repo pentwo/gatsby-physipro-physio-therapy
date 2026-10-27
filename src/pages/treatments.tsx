@@ -280,4 +280,10 @@ const TreatmentCard: React.FC<TreatmentProps> = ({ treatment }) => {
 
 export default TreatmentsPage;
 
-export const Head: HeadFC = () => <Seo title="Treatments" />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    title="Treatments"
+    description="Hands-on and evidence-based treatments: exercise prescription, soft tissue release, acupuncture, cupping, taping, ultrasound, NKT and vestibular therapy."
+    pathname={location.pathname}
+  />
+);

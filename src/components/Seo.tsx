@@ -5,10 +5,19 @@ interface SeoProps {
   title?: string;
   description?: string;
   pathname?: string;
+  image?: string;
+  noindex?: boolean;
   children?: React.ReactNode;
 }
 
-export const Seo: React.FC<SeoProps> = ({ title, description, pathname, children }) => {
+export const Seo: React.FC<SeoProps> = ({
+  title,
+  description,
+  pathname,
+  image,
+  noindex,
+  children,
+}) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -28,27 +37,85 @@ export const Seo: React.FC<SeoProps> = ({ title, description, pathname, children
   const seo = {
     title: title ? `${title} | ${siteMetadata.title}` : siteMetadata.title,
     description: description || siteMetadata.description,
-    url: `${siteMetadata.siteUrl}${pathname || ""}`,
+    url: `${siteMetadata.siteUrl}${pathname || "/"}`,
+    image: `${siteMetadata.siteUrl}${image || siteMetadata.image}`,
+  };
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Physiotherapy",
+    "@id": `${siteMetadata.siteUrl}/#business`,
+    name: siteMetadata.title,
+    description: siteMetadata.description,
+    url: siteMetadata.siteUrl,
     image: `${siteMetadata.siteUrl}${siteMetadata.image}`,
+    logo: `${siteMetadata.siteUrl}/favicon.svg`,
+    telephone: "+61414783263",
+    email: "physiprophysiotherapy@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Duncraig",
+      addressRegion: "WA",
+      postalCode: "6023",
+      addressCountry: "AU",
+    },
+    areaServed: "Perth, WA",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Tuesday", "Thursday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "09:00",
+        closes: "13:00",
+      },
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Vienn Chan",
+      jobTitle: "Master Physiotherapist",
+    },
+    sameAs: [
+      "https://www.facebook.com/vienn.physipro.physiotherapy.perth",
+      "https://www.instagram.com/vienn_perth_physio/",
+    ],
   };
 
   return (
     <>
+      <html lang="en" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
+      <link rel="canonical" href={seo.url} />
+      {noindex && <meta name="robots" content="noindex, follow" />}
+      <meta name="theme-color" content="#5B4BE0" />
+      {/* Favicons */}
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      {/* Open Graph */}
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
-      <meta property="og:locale" content={siteMetadata.locale} />
+      <meta property="og:locale" content={siteMetadata.locale.replace("-", "_")} />
+      <meta property="og:locale:alternate" content="zh_HK" />
       <meta property="og:image" content={seo.image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="PhysiPro Physiotherapy — Vienn Chan, Master Physiotherapist in Perth" />
       <meta property="og:site_name" content={siteMetadata.title} />
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+      {/* Structured data */}
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       {/* Google Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

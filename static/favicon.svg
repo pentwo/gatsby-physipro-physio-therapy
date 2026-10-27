@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-170 -170 340 340" width="340" height="340">
+  <defs>
+    <linearGradient id="ppTop" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#7B14C9"></stop>
+      <stop offset="50%" stop-color="#A24BF5"></stop>
+      <stop offset="100%" stop-color="#9FE5FF"></stop>
+    </linearGradient>
+    <linearGradient id="ppBot" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#22C7F5"></stop>
+      <stop offset="55%" stop-color="#1E9BE8"></stop>
+      <stop offset="100%" stop-color="#2A6FDB"></stop>
+    </linearGradient>
+    <filter id="ppShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"></feGaussianBlur>
+      <feOffset dx="0" dy="3" result="off"></feOffset>
+      <feComponentTransfer><feFuncA type="linear" slope="0.22"></feFuncA></feComponentTransfer>
+      <feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#ppShadow)">
+    <g transform="translate(14 -22) rotate(45)">
+      <path fill="url(#ppTop)" fill-rule="evenodd" d="M -22 -100 L 8 -100 C 50 -100, 70 -72, 70 -44 C 70 -14, 50 16, 8 16 L 6 16 C -4 16, -10 22, -10 32 L -10 84 C -10 94, -16 100, -26 100 L -22 100 C -32 100, -38 94, -38 84 L -38 -84 C -38 -94, -32 -100, -22 -100 Z M -10 -72 L 4 -72 C 26 -72, 38 -60, 38 -44 C 38 -28, 26 -16, 4 -16 L -10 -16 Z"></path>
+    </g>
+    <g transform="translate(-11 43) rotate(225)">
+      <path fill="url(#ppBot)" fill-rule="evenodd" d="M -22 -100 L 8 -100 C 50 -100, 70 -72, 70 -44 C 70 -14, 50 16, 8 16 L 6 16 C -4 16, -10 22, -10 32 L -10 84 C -10 94, -16 100, -26 100 L -22 100 C -32 100, -38 94, -38 84 L -38 -84 C -38 -94, -32 -100, -22 -100 Z M -10 -72 L 4 -72 C 26 -72, 38 -60, 38 -44 C 38 -28, 26 -16, 4 -16 L -10 -16 Z"></path>
+    </g>
+  </g>
+</svg>

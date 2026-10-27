@@ -351,4 +351,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, learnMoreText }) => 
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <Seo />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    description="Master-qualified physiotherapy in Perth with Vienn Chan — musculoskeletal pain, sports injury, NKT, acupuncture and home visits from Duncraig."
+    pathname={location.pathname}
+  />
+);

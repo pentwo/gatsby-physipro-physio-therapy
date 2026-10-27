@@ -203,4 +203,10 @@ const NktPage: React.FC<PageProps> = () => {
 
 export default NktPage;
 
-export const Head: HeadFC = () => <Seo title="Neurokinetic Therapy" />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    title="Neurokinetic Therapy"
+    description="Neurokinetic Therapy (NKT) in Perth — a Level 3 Master practitioner assessing and correcting dysfunctional movement patterns behind recurrent pain."
+    pathname={location.pathname}
+  />
+);

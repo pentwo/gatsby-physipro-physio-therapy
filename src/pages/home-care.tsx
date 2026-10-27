@@ -142,4 +142,10 @@ const HomeCarePage: React.FC<PageProps> = () => {
 
 export default HomeCarePage;
 
-export const Head: HeadFC = () => <Seo title="Home Care" />;
+export const Head: HeadFC = ({ location }) => (
+  <Seo
+    title="Home Care Physiotherapy"
+    description="Home visit physiotherapy across Perth — within 40 km of Duncraig — for elderly reconditioning, post-operative rehab, post-cancer recovery and disability support."
+    pathname={location.pathname}
+  />
+);
