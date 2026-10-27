@@ -12,7 +12,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      eyebrow: "Perth & Northbridge · Master Physiotherapist",
+      eyebrow: "Perth · Master Physiotherapist",
       title: "Movement, restored with care & clinical clarity.",
       titlePart1: "Movement, restored",
       titlePart2: "with",
@@ -62,7 +62,7 @@ export const translations = {
       bioPara2:
         "She is committed to providing high-quality care through thorough assessment, tailored exercise programs, hands-on treatment and clear education to help clients reach their goals.",
       bioPara3:
-        "Vienn integrates clinical Pilates and Eastern therapies such as cupping and acupuncture, and holds a Level 3 Master qualification in Neurokinetic Therapy (NKT) — an effective approach for treating recurrent pain and movement dysfunction. Beyond her clinics in Duncraig and Skin and Medical Northbridge, she also offers Home Visits and Telehealth consultations.",
+        "Vienn integrates clinical Pilates and Eastern therapies such as cupping and acupuncture, and holds a Level 3 Master qualification in Neurokinetic Therapy (NKT) — an effective approach for treating recurrent pain and movement dysfunction. Beyond her clinic in Duncraig, she also offers Home Visits and Telehealth consultations.",
       // Philosophy
       phil1Title: "Assess thoroughly",
       phil1Desc:
@@ -294,14 +294,13 @@ export const translations = {
     // Contact
     contact: {
       eyebrow: "Contact",
-      title: "Two clinics. Home visits. Always direct contact.",
-      lede: "Reach Vienn directly — no booking robots, no automated triage. Choose your nearest clinic or request a home visit.",
+      title: "One clinic. Home visits. Always direct contact.",
+      lede: "Reach Vienn directly — no booking robots, no automated triage. Visit our Duncraig clinic or request a home visit.",
       phoneSms: "Phone / SMS",
       email: "Email",
       hours: "Hours",
       address: "Address",
       callNow: "Call now",
-      bookHotDoc: "Book on HotDoc",
       offSiteEyebrow: "Off-site care",
       homeVisits: "Home visits",
       homeVisitsDesc:
@@ -313,21 +312,16 @@ export const translations = {
       bookTelehealth: "Book telehealth",
       // Days
       duncraigDays: "Tue · Thu · Sat",
-      northbridgeDays: "Mon · Wed · Fri",
       tue: "Tue",
       thu: "Thu",
       sat: "Sat",
-      mon: "Mon",
-      wed: "Wed",
-      fri: "Fri",
     },
     // CTA Band
     ctaBand: {
       eyebrow: "Get started",
       title: "Ready to move without hesitation?",
-      lede: "Reach Vienn directly by phone or SMS, or book online with our Northbridge clinic. Home visits are available across Perth on request.",
+      lede: "Reach Vienn directly by phone or SMS. Home visits are available across Perth on request.",
       callDuncraig: "Call Duncraig",
-      bookNorthbridge: "Book Northbridge",
     },
     // Footer
     footer: {
@@ -351,7 +345,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      eyebrow: "珀斯及 Northbridge · 物理治療碩士",
+      eyebrow: "珀斯 · 物理治療碩士",
       title: "以專業與關懷，助您重拾活動能力。",
       titlePart1: "以專業與關懷",
       titlePart2: "助您重拾",
@@ -401,7 +395,7 @@ export const translations = {
       bioPara2:
         "她致力提供高質量的護理，透過徹底評估、度身訂造的運動計劃、手法治療及清晰的教育，協助病患達成康復目標。",
       bioPara3:
-        "Vienn 融合臨床普拉提及東方療法（如拔罐和針灸），並持有神經動能療法 (NKT) 三級大師資歷，這是治療反覆疼痛及運動功能障礙的有效方法。除了在 Duncraig 及 Northbridge 診所坐鎮，她亦提供上門物理治療及遠程醫療諮詢服務。",
+        "Vienn 融合臨床普拉提及東方療法（如拔罐和針灸），並持有神經動能療法 (NKT) 三級大師資歷，這是治療反覆疼痛及運動功能障礙的有效方法。除了在 Duncraig 診所坐鎮，她亦提供上門物理治療及遠程醫療諮詢服務。",
       // Philosophy
       phil1Title: "徹底評估",
       phil1Desc: "每個計劃都由完整的臨床評估開始，包括動作測試、病史分析及建立明確的診斷假設。",
@@ -618,14 +612,13 @@ export const translations = {
     // Contact
     contact: {
       eyebrow: "聯絡我們",
-      title: "兩間診所。上門服務。直接聯繫。",
-      lede: "直接聯繫 Vienn——沒有機器人，沒有繁瑣轉駁。選擇最近的診所或要求上門服務。",
+      title: "一間診所。上門服務。直接聯繫。",
+      lede: "直接聯繫 Vienn——沒有機器人，沒有繁瑣轉駁。前往我們的 Duncraig 診所或要求上門服務。",
       phoneSms: "電話 / 短訊",
       email: "電郵",
       hours: "營業時間",
       address: "地址",
       callNow: "立即致電",
-      bookHotDoc: "在 HotDoc 預約",
       offSiteEyebrow: "診所外護理",
       homeVisits: "上門服務",
       homeVisitsDesc: "按要求於珀斯各區提供——治療時長與深度與診所一致。將按距離收取車資。",
@@ -635,21 +628,16 @@ export const translations = {
       bookTelehealth: "預約遠端諮詢",
       // Days
       duncraigDays: "週二 · 週四 · 週六",
-      northbridgeDays: "週一 · 週三 · 週五",
       tue: "週二",
       thu: "週四",
       sat: "週六",
-      mon: "週一",
-      wed: "週三",
-      fri: "週五",
     },
     // CTA Band
     ctaBand: {
       eyebrow: "立即開始",
       title: "準備好再次活動自如？",
-      lede: "直接致電或短訊聯繫 Vienn，或在我們的 Northbridge 診所網上預約。珀斯全區可按要求提供上門服務。",
+      lede: "直接致電或短訊聯繫 Vienn。珀斯全區可按要求提供上門服務。",
       callDuncraig: "聯絡 Duncraig",
-      bookNorthbridge: "預約 Northbridge",
     },
     // Footer
     footer: {

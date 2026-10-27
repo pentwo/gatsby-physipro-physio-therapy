@@ -5,7 +5,6 @@ import {
   IconPhone,
   IconMail,
   IconClock,
-  IconMapPin,
   IconArrowRight,
 } from "@tabler/icons-react";
 import { Layout } from "@/components/Layout";
@@ -127,92 +126,6 @@ const ContactPage: React.FC<PageProps> = () => {
               </Box>
               <Anchor href="tel:+61414783263" className="loc-cta">
                 {t.contact.callNow}
-                <IconArrowRight size={14} />
-              </Anchor>
-            </Box>
-
-            {/* Northbridge */}
-            <Box className="loc">
-              <Title
-                order={3}
-                style={{
-                  color: "#fff",
-                  fontFamily: "var(--serif)",
-                  fontSize: 30,
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: 12,
-                  marginBottom: 0,
-                }}
-              >
-                Northbridge{" "}
-                <Text
-                  component="small"
-                  style={{
-                    fontSize: 12,
-                    letterSpacing: ".2em",
-                    textTransform: "uppercase",
-                    color: "#B6A8FF",
-                    fontFamily: "var(--sans)",
-                    fontWeight: 500,
-                  }}
-                >
-                  {t.contact.northbridgeDays}
-                </Text>
-              </Title>
-              <Box className="row">
-                <Box className="ico">
-                  <IconMapPin size={16} />
-                </Box>
-                <Box>
-                  <Box className="lbl">{t.contact.address}</Box>
-                  <Box className="val">
-                    Skin and Medical Northbridge
-                    <br />
-                    Perth WA 6000
-                  </Box>
-                </Box>
-              </Box>
-              <Box className="row">
-                <Box className="ico">
-                  <IconPhone size={16} />
-                </Box>
-                <Box>
-                  <Box className="lbl">{t.contact.phoneSms}</Box>
-                  <Box className="val">
-                    <Anchor href="tel:+61865585188">08 6558 5188</Anchor>
-                  </Box>
-                </Box>
-              </Box>
-              <Box className="row">
-                <Box className="ico">
-                  <IconClock size={16} />
-                </Box>
-                <Box style={{ flex: 1 }}>
-                  <Box className="lbl">{t.contact.hours}</Box>
-                  <Box className="hours">
-                    <Box>
-                      <Box className="d">{t.contact.mon}</Box>
-                      <Box className="t">9:00–17:00</Box>
-                    </Box>
-                    <Box>
-                      <Box className="d">{t.contact.wed}</Box>
-                      <Box className="t">9:00–17:00</Box>
-                    </Box>
-                    <Box>
-                      <Box className="d">{t.contact.fri}</Box>
-                      <Box className="t">9:00–17:00</Box>
-                    </Box>
-                  </Box>
-                </Box>
-              </Box>
-              <Anchor
-                href="https://www.hotdoc.com.au/medical-centres/perth-WA-6000/skin-and-medical-northbridge/doctors"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="loc-cta alt"
-              >
-                {t.contact.bookHotDoc}
                 <IconArrowRight size={14} />
               </Anchor>
             </Box>

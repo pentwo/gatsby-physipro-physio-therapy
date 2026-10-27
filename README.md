@@ -14,7 +14,7 @@ A bilingual (English/Chinese) website for PhysiPro Physiotherapy clinic built wi
 - Full English/Chinese (中文) localization
 - 6 specialty services
 - 8 treatment modalities
-- Contact page with clinic locations (Duncraig & Northbridge)
+- Contact page with clinic location (Duncraig)
 - Responsive design
 
 ## Development

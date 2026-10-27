@@ -28,14 +28,6 @@ export const CtaBand: React.FC = () => {
             {t.ctaBand.callDuncraig}
             <IconArrowRight size={14} />
           </Anchor>
-          <Anchor
-            href="https://www.hotdoc.com.au/medical-centres/perth-WA-6000/skin-and-medical-northbridge/doctors"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-line-w"
-          >
-            {t.ctaBand.bookNorthbridge}
-          </Anchor>
         </Box>
       </Box>
     </Box>

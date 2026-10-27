@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
         <Box
           style={{
             display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr",
+            gridTemplateColumns: "2fr 1fr 1fr",
             gap: 48,
             paddingBottom: 48,
             borderBottom: "1px solid rgba(255,255,255,.08)",
@@ -125,32 +125,6 @@ export const Footer: React.FC = () => {
             </FooterExternalLink>
             <Text style={{ display: "block", fontSize: 14, padding: "4px 0" }}>
               Tue · Thu · Sat
-            </Text>
-          </Box>
-
-          <Box>
-            <Text
-              component="h4"
-              style={{
-                fontFamily: "var(--sans)",
-                fontSize: 12,
-                letterSpacing: ".18em",
-                textTransform: "uppercase",
-                color: "#fff",
-                fontWeight: 600,
-                marginBottom: 14,
-              }}
-            >
-              Northbridge
-            </Text>
-            <FooterExternalLink href="tel:+61865585188">
-              08 6558 5188
-            </FooterExternalLink>
-            <FooterExternalLink href="https://www.hotdoc.com.au/medical-centres/perth-WA-6000/skin-and-medical-northbridge/doctors">
-              {t.contact.bookHotDoc}
-            </FooterExternalLink>
-            <Text style={{ display: "block", fontSize: 14, padding: "4px 0" }}>
-              Mon · Wed · Fri
             </Text>
           </Box>
         </Box>
